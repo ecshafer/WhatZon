@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-4b5e7e4252ec36f8fc0381c80ce2452d3b05d4cc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-5625085395a8551e0cf6fb38cb9109e636ddf90d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-76e0f68cca10d78bb35e77ec1d9bd721e956f20a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-25cd39fefdf012030ac0564872c4e7be74caeaa6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.1.4\129874135e6081269ace2312092031558865de12\bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\bolts-android-1.1.4-633c109099b05830bac77eb66b4d30f2e8f43b46.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.facebook.android\facebook\3.23.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6df7f49d23e01ebaa02437ff1c2dbedc0ff93561">
+        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-7a81c69773432786a08b747a60163f98759a4008.jar" />
+    </item>
+
+</items>
