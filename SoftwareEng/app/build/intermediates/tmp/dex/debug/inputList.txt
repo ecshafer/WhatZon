@@ -1,7 +1,0 @@
-C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\classes\debug
-C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-76e0f68cca10d78bb35e77ec1d9bd721e956f20a.jar
-C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\bolts-android-1.1.4-633c109099b05830bac77eb66b4d30f2e8f43b46.jar
-C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-5625085395a8551e0cf6fb38cb9109e636ddf90d.jar
-C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-25cd39fefdf012030ac0564872c4e7be74caeaa6.jar
-C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-7a81c69773432786a08b747a60163f98759a4008.jar
-C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-4b5e7e4252ec36f8fc0381c80ce2452d3b05d4cc.jar
