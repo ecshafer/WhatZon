@@ -5,28 +5,43 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
+
 
 
 public class MainActivity extends ActionBarActivity {
 
-    public void toPageLogin(View view) {
+    public void load() {
+
+        if (false) {
+
+            this.toErrorLogin();
+
+        } else {
+
+            this.toPageLogin();
+        }
+
+
+    }
+
+    public void toErrorLogin() {
+        Intent intent = new Intent(this, Error.class);
+        startActivity(intent);
+
+    }
+
+    public void toPageLogin() {
         Intent intent = new Intent(this, Login.class);
-       // EditText editText = (EditText) findViewById(R.id.edit_message);
-      //  String message = editText.getText().toString();
-      //  intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+                setContentView(R.layout.activity_main);
 
-
+        this.load();
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
