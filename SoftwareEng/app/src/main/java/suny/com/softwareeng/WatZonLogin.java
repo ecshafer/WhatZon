@@ -1,7 +1,10 @@
 
 
 package suny.com.softwareeng;
-
+import android.content.Context;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
 import android.app.AlertDialog;
 import android.content.Intent;
 
@@ -18,7 +21,8 @@ import android.view.ViewGroup;
 
 import com.facebook.AppEventsLogger;
 import com.facebook.FacebookAuthorizationException;
-
+import android.widget.TextView;
+import  android.graphics.Typeface;
 import com.facebook.FacebookOperationCanceledException;
 
 import com.facebook.Session;
@@ -48,6 +52,7 @@ public class WatZonLogin extends FragmentActivity {
     private PendingAction pendingAction = PendingAction.NONE;
     private ViewGroup controlsContainer;
     private GraphUser user;
+    private ImageView image;
 
 
     private enum PendingAction {
@@ -76,17 +81,22 @@ public class WatZonLogin extends FragmentActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        final Context context = this;
+        Intent intent = new Intent(context, Events.class);
+        startActivity(intent);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //Remove notification bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         super.onCreate(savedInstanceState);
         uiHelper = new UiLifecycleHelper(this, callback);
         uiHelper.onCreate(savedInstanceState);
-
         if (savedInstanceState != null) {
             String name = savedInstanceState.getString(PENDING_ACTION_BUNDLE_KEY);
             pendingAction = PendingAction.valueOf(name);
         }
-
         setContentView(R.layout.main);
-
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setUserInfoChangedCallback(new LoginButton.UserInfoChangedCallback() {
             @Override
@@ -158,9 +168,6 @@ public class WatZonLogin extends FragmentActivity {
     public void onPause() {
         super.onPause();
         uiHelper.onPause();
-
-        // Call the 'deactivateApp' method to log an app event for use in analytics and advertising
-        // reporting.  Do so in the onPause methods of the primary Activities that an app may be launched into.
         AppEventsLogger.deactivateApp(this);
     }
 
@@ -188,7 +195,13 @@ public class WatZonLogin extends FragmentActivity {
 
     private void updateUI() {
         Session session = Session.getActiveSession();
-        boolean enableButtons = (session != null && session.isOpened());
+
+       if (session.isOpened()) {
+            System.out.print("HAHAHAAHAHAHAHAHAAAAAAAAAAAAAAAAAAAAAA");
+          final Context context = this;
+         Intent intent = new Intent(context, Events.class);
+          startActivity(intent);
+        }
 
 
     }
