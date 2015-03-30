@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background= "#ffffff"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+    tools:context="com.andapp.csc380.whatzon.MenuPage">
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageButton"
+        android:background="@drawable/preferences"
+        android:layout_above="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/preferences"
+
+        android:nestedScrollingEnabled="false"
+        android:background="@drawable/settings"
+        android:layout_above="@+id/editText2"
+        android:layout_alignStart="@+id/addEvents" />
+
+    <ImageButton
+        android:layout_width="80dp"
+
+        android:layout_height="80dp"
+        android:id="@+id/addEvents"
+        android:background="@drawable/addevent"
+        android:layout_marginEnd="65dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:textColor="#000"
+        android:text="Preferences"
+        android:layout_above="@+id/addEvents"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:textColor="#000"
+        android:text="Settings"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/editText4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:textColor="#000"
+        android:text="Calendar"
+        android:layout_below="@+id/imageButton2"
+        android:layout_alignStart="@+id/imageButton2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:textColor="#000"
+        android:text="Add Event"
+        android:layout_alignTop="@+id/editText3"
+        android:layout_alignEnd="@+id/addEvents" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageButton2"
+        android:background="@drawable/calendar"
+        android:layout_alignTop="@+id/addEvents"
+        android:layout_alignStart="@+id/editText" />
+</RelativeLayout>
+<!-- From: file:/C:/Users/Lucas/SoftwareEngineering/SoftwareEng/app/src/main/res/layout/activity_menu_page.xml -->

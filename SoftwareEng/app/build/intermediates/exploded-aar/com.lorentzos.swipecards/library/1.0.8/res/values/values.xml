@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeFlingAdapterView"><attr format="reference" name="SwipeFlingStyle"/><attr format="float" name="rotation_degrees"/><attr format="integer" name="min_adapter_stack"/><attr format="integer" name="max_visible"/></declare-styleable>
+    <!-- From: file:/Users/Dionysis_Lorentzos/AndroidStudioProjects/Swipecards/library/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">Fling Swipe Cards</string>
+    <!-- From: file:/Users/Dionysis_Lorentzos/AndroidStudioProjects/Swipecards/library/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="SwipeFling">
+        <item name="rotation_degrees">15</item>
+        <item name="min_adapter_stack">6</item>
+        <item name="max_visible">4</item>
+    </style>
+</resources>
