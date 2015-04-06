@@ -8,12 +8,14 @@
     android:background="#ffffffff">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="150dp"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
         android:id="@+id/imageView2"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="168dp"
         android:layout_below="@+id/txtName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -32,26 +34,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="02/02/15"
+        android:text="Datet"
         android:id="@+id/txtDate"
-        android:layout_marginTop="65dp"
-        android:textColor="#ff000000"
+        android:layout_marginTop="69dp"
         android:layout_alignTop="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2" />
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2"
+        android:textColor="#ff000000" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="14h"
+        android:text="Time"
         android:id="@+id/txtTime"
         android:layout_below="@+id/txtDate"
-        android:textColor="#ff000000"
-        android:layout_toEndOf="@+id/imageView2" />
+        android:layout_alignLeft="@+id/txtDate"
+        android:layout_alignStart="@+id/txtDate"
+        android:textColor="#ff000000" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="135dp"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Description"
         android:id="@+id/txtDescription"
@@ -60,6 +64,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:phoneNumber="false"
+        android:layout_below="@+id/txtAdress"
         android:layout_alignParentBottom="true"
         android:textColor="#ff000000" />
 
@@ -70,8 +75,9 @@
         android:text="Adress"
         android:id="@+id/txtAdress"
         android:textColor="#ff000000"
-        android:layout_above="@+id/txtDescription"
-        android:layout_toEndOf="@+id/btnMenu" />
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_toRightOf="@+id/btnMaps"
+        android:layout_toEndOf="@+id/btnMaps" />
 
     <ImageButton
         android:layout_width="30dp"
@@ -89,8 +95,9 @@
         android:id="@+id/btnNo"
         android:adjustViewBounds="false"
         android:background="@drawable/no"
-        android:layout_above="@+id/txtName"
-        android:layout_alignEnd="@+id/txtDescription" />
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/txtDate"
+        android:layout_toStartOf="@+id/txtDate" />
 
     <ImageButton
         android:layout_width="30dp"
@@ -98,14 +105,16 @@
         android:id="@+id/btnYes"
         android:background="@drawable/yes"
         android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/txtDate" />
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2" />
 
     <ImageButton
         android:layout_width="25dp"
         android:layout_height="30dp"
         android:id="@+id/btnMaps"
         android:background="@drawable/map"
-        android:layout_alignTop="@+id/txtAdress"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>
