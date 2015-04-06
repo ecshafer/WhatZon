@@ -23,6 +23,7 @@ public class AddEvent extends Activity{
     ArrayList<Event> event = new ArrayList<Event>();
     EditText title;
     EditText location;
+    EditText time;
     EditText date;
     ImageButton ok;
     EditText moreInfo;
@@ -44,6 +45,7 @@ public class AddEvent extends Activity{
         //Remove notification bar
         title = (EditText) findViewById(R.id.Title);
         date = (EditText) findViewById(R.id.Date);
+        time = (EditText) findViewById(R.id.Time);
         moreInfo = (EditText) findViewById(R.id.MoreInfo);
         location = (EditText) findViewById(R.id.Location);
 
@@ -55,9 +57,9 @@ public class AddEvent extends Activity{
                     locationStr = location.getText().toString();
                 if(moreInfo.getText().toString().trim().length() != 0)
                     moreInfoStr = moreInfo.getText().toString();
-                if(moreInfo.getText().toString().trim().length() != 0)
+                if(date.getText().toString().trim().length() != 0)
                     dateStr = moreInfo.getText().toString();
-                if(moreInfo.getText().toString().trim().length() != 0)
+                if(time.getText().toString().trim().length() != 0)
                     timeStr = moreInfo.getText().toString();
                 ev = new Event(titleStr,locationStr,moreInfoStr,dateStr,timeStr);
                 event.add(ev);
