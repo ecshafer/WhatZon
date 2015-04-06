@@ -16,13 +16,10 @@
     <permission
         android:name="com.pgi.routviewer.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
-<<<<<<< HEAD
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-=======
+
     <uses-permission android:name="suny.com.softwareeng.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
->>>>>>> SaraivaBranch
     <application android:label="WhatZon"
         android:icon="@drawable/ic_launcher"
         android:theme="@style/Theme.AppCompat.NoActionBar"
@@ -33,11 +30,8 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAB6Qp5xaWZ3Vh4Zh_u0bSkjnPvz0Wwv2k" />
-<<<<<<< HEAD
-        <activity android:name=".WatZonLogin"
-=======
+
         <activity android:name=".Login"
->>>>>>> SaraivaBranch
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -61,9 +55,10 @@
         </activity>
         <activity
             android:label="WhatZon"
-<<<<<<< HEAD
+
 
             android:name=".AddEvent" >
+
         </activity>
         <activity
             android:label="WhatZon"
@@ -74,27 +69,11 @@
             android:label="WhatZon"
 
             android:name=".Preferences" >
-=======
-
-            android:name=".AddEvent" >
->>>>>>> SaraivaBranch
         </activity>
         <activity
             android:label="WhatZon"
 
-<<<<<<< HEAD
-=======
-            android:name=".MenuPage" >
-        </activity>
-        <activity
-            android:label="WhatZon"
 
-            android:name=".Preferences" >
-        </activity>
-        <activity
-            android:label="WhatZon"
-
->>>>>>> SaraivaBranch
             android:name=".MapsActivity" >
         </activity>
         <activity
