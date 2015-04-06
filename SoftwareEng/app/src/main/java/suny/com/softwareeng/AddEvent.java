@@ -4,30 +4,22 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.text.Html;
 import android.util.Log;
-
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-
-import android.widget.ImageButton;
-
-
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-
 /**
  * Created by Lucas on 3/25/2015.
  */
 public class AddEvent extends Activity{
-
     ArrayList<Event> event = new ArrayList<Event>();
     EditText title;
     EditText location;
@@ -35,9 +27,8 @@ public class AddEvent extends Activity{
     ImageButton ok;
     EditText moreInfo;
     Event ev;
-    Date dateStr;
-    String titleStr, locationStr,moreInfoStr;
 
+    String titleStr, locationStr,moreInfoStr, dateStr,timeStr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -64,7 +55,11 @@ public class AddEvent extends Activity{
                     locationStr = location.getText().toString();
                 if(moreInfo.getText().toString().trim().length() != 0)
                     moreInfoStr = moreInfo.getText().toString();
-                ev = new Event(titleStr,locationStr,moreInfoStr);
+                if(moreInfo.getText().toString().trim().length() != 0)
+                    dateStr = moreInfo.getText().toString();
+                if(moreInfo.getText().toString().trim().length() != 0)
+                    timeStr = moreInfo.getText().toString();
+                ev = new Event(titleStr,locationStr,moreInfoStr,dateStr,timeStr);
                 event.add(ev);
                 Intent intent = new Intent(context, MenuPage.class);
                 startActivity(intent);
@@ -80,7 +75,6 @@ public class AddEvent extends Activity{
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(context, MenuPage.class);
-
                 startActivity(intent);
             }
         });
