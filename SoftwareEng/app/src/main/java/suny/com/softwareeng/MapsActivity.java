@@ -82,6 +82,7 @@ public class MapsActivity extends FragmentActivity {
     }
 
 
+<<<<<<< HEAD
     /**
      * Sets up the map if it is possible to do so (i.e., the Google Play services APK is correctly
      * installed) and the map has not already been instantiated.. This will ensure that we only ever
@@ -97,6 +98,9 @@ public class MapsActivity extends FragmentActivity {
      * stopped or paused), {@link #onCreate(android.os.Bundle)} may not be called again so we should call this
      * method in {@link #onResume()} to guarantee that it will be called.
      */
+=======
+
+>>>>>>> SaraivaBranch
     private void createMapView() {
         /**
          * Catch the null pointer exception that

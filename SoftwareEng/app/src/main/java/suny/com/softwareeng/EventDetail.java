@@ -13,6 +13,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+<<<<<<< HEAD
+=======
+import android.widget.TextView;
+>>>>>>> SaraivaBranch
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -55,16 +59,38 @@ public class EventDetail extends ActionBarActivity {
         Bundle extras = getIntent().getExtras();
         HashMap<String,String>  value = new HashMap<String,String> ();
         if (extras != null) {
+<<<<<<< HEAD
             value =( HashMap<String,String>) extras.getSerializable("hash");
         }
         Log.d("DETAILS", value.toString());
+=======
+            TextView name = (TextView) findViewById(R.id.txtName);
+            ImageView picture = (ImageView) findViewById(R.id.imageView2);
+            value =( HashMap<String,String>) extras.getSerializable("hash");
+            int begin = value.toString().indexOf("=") + 1;
+            String teste2 = value.toString().substring((value.toString().indexOf("picture=")+8), (value.toString().indexOf("}")-1));
+            String teste = value.toString().substring(begin,(value.toString().indexOf(",")-1 ));
+            name.setText(value.toString().substring(begin,value.toString().indexOf(",") ));
+            String draw =  "party";
+            int id = getResources().getIdentifier(draw, "drawable", getPackageName());
+            Drawable drawable = getResources().getDrawable(id);
+            picture.setBackground(drawable);
+            Log.d("DETAILS",teste2);
+            Log.d("DETAILS", value.toString());
+        }
+
+>>>>>>> SaraivaBranch
         ImageView picture = (ImageView) findViewById(R.id.imageView2);
         //picture.setBackground((Integer) value.get("picture"));
         right.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Save in the calendar
                 Log.d("Details", "Right");
+<<<<<<< HEAD
                 Calendar cal = Calendar.getInstance();
+=======
+              /*  Calendar cal = Calendar.getInstance();
+>>>>>>> SaraivaBranch
                 Intent intent = new Intent(Intent.ACTION_EDIT);
                 intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("beginTime", cal.getTimeInMillis());
@@ -72,17 +98,33 @@ public class EventDetail extends ActionBarActivity {
                 intent.putExtra("rrule", "FREQ=YEARLY");
                 intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
                 intent.putExtra("title", "A Test Event from android app");
+<<<<<<< HEAD
                 startActivity(intent);
                 Intent intent2 = new Intent(context, Events.class);
                 startActivity(intent2);
+=======
+                startActivity(intent);*/
+                Intent intent = new Intent(context, Events.class);;
+                intent.putExtra("answer","right");
+                setResult(RESULT_OK, intent);
+                finish();
+>>>>>>> SaraivaBranch
             }
         });
         left.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+<<<<<<< HEAD
 
                 Log.d ("Details", "Left");
                 Intent intent = new Intent(context, Events.class);
                 startActivity(intent);
+=======
+                Intent intent = new Intent(context, Events.class);;
+                intent.putExtra("answer","left");
+                setResult(RESULT_OK, intent);
+                finish();
+
+>>>>>>> SaraivaBranch
             }
         });
     }
