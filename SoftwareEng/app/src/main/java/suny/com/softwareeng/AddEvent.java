@@ -4,32 +4,30 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-<<<<<<< HEAD
-=======
+
 import android.text.Html;
 import android.util.Log;
->>>>>>> SaraivaBranch
+
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-<<<<<<< HEAD
+
 import android.widget.ImageButton;
 
-=======
+
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
 import java.util.Date;
 
->>>>>>> SaraivaBranch
+
 /**
  * Created by Lucas on 3/25/2015.
  */
 public class AddEvent extends Activity{
-<<<<<<< HEAD
-=======
+
     ArrayList<Event> event = new ArrayList<Event>();
     EditText title;
     EditText location;
@@ -39,25 +37,11 @@ public class AddEvent extends Activity{
     Event ev;
     Date dateStr;
     String titleStr, locationStr,moreInfoStr;
->>>>>>> SaraivaBranch
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-<<<<<<< HEAD
-        //Remove notification bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        final Context context = this;
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.addevent);
-        ImageButton menu = (ImageButton) findViewById(R.id.ImageButton01);
-        menu.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(context, MenuPage.class);
-
-
-=======
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
