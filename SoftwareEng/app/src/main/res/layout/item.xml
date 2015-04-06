@@ -37,11 +37,9 @@
         android:orientation="horizontal"
         android:weightSum="1">
         <TextView
-<<<<<<< HEAD
-            android:id="@+id/helloText"
-=======
+
             android:id="@+id/eventText"
->>>>>>> SaraivaBranch
+
             android:layout_width="310dp"
             android:layout_height="87dp"
             android:textSize="20dp"
