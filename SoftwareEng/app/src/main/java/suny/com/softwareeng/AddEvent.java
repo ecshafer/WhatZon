@@ -80,7 +80,7 @@ public class AddEvent extends Activity{
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(context, MenuPage.class);
->>>>>>> SaraivaBranch
+
                 startActivity(intent);
             }
         });
