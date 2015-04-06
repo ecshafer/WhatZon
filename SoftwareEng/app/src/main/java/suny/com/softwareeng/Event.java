@@ -12,18 +12,19 @@ import java.util.Date;
 public class Event {
 
     private String picture;
-
     private String title;
     private String location;
-    private Date date;
-    private Time time;
+    private String date;
+    private String time;
     private String tags;
     private String moreInfo;
 
-    public Event( String title,String location,  String moreInfo){
+    public Event( String title,String location,  String moreInfo,String date,String time){
 
         this.title = title;
         this.location = location;
+        this.date = date;
+        this.time= time;
         this.moreInfo = moreInfo;
     }
     public void setLocation(String location) {
@@ -44,10 +45,15 @@ public class Event {
     public String getTitle() throws IllegalStateException {
         return title;
     }
+    public String getDate() throws IllegalStateException {
+        return date;
+    }
+    public String getTime() throws IllegalStateException {
+        return time;
+    }
 
     @Override
     public String toString() {
-        return "Title:"+getTitle()+"\nLocation:"+getLocation()+"\nInformation"+getMoreInfo();
+        return "Title:"+getTitle()+"\nLocation:"+getLocation()+"\nInformation"+getMoreInfo()+"\nDate"+getDate()+"\nTime"+getTime();
     }
-
 }
