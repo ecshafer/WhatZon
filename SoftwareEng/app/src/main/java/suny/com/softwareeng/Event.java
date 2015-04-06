@@ -12,21 +12,7 @@ import java.util.Date;
 public class Event {
 
     private String picture;
-<<<<<<< HEAD
-    private String name;
-    private String address;
-    private Date date;
-    private Time time;
-    private String tags;
 
-
-    public Event(String picture, String name){
-        this.picture =picture;
-        this.name = name;
-    }
-
-
-=======
     private String title;
     private String location;
     private Date date;
@@ -63,5 +49,5 @@ public class Event {
     public String toString() {
         return "Title:"+getTitle()+"\nLocation:"+getLocation()+"\nInformation"+getMoreInfo();
     }
->>>>>>> SaraivaBranch
+
 }
