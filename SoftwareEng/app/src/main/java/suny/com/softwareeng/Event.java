@@ -16,16 +16,17 @@ public class Event {
     private String location;
     private String date;
     private String time;
-    private String tags;
+    private Tags tags;
     private String moreInfo;
 
-    public Event( String title,String location,  String moreInfo,String date,String time){
+    public Event( String title,String location,String moreInfo,String date,String time,Tags tags){
 
         this.title = title;
         this.location = location;
         this.date = date;
         this.time= time;
         this.moreInfo = moreInfo;
+        this.tags = tags;
     }
     public void setLocation(String location) {
         this.location = location;
@@ -51,6 +52,8 @@ public class Event {
     public String getTime() throws IllegalStateException {
         return time;
     }
+    public String getTags(){ return tags.toString();}
+    public Tags getTagsValues(){return tags;}
 
     @Override
     public String toString() {
