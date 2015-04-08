@@ -38,6 +38,7 @@ public class Login extends FragmentActivity {
     private PendingAction pendingAction = PendingAction.NONE;
     private ViewGroup controlsContainer;
     private GraphUser user;
+    public static String name;
     private ImageView image;
     private enum PendingAction {
         NONE,
@@ -146,8 +147,15 @@ public class Login extends FragmentActivity {
                 public void onCompleted(GraphUser user, Response response){
                     if (response != null){
                         try{
-                            String name = user.getName();
+                             name = user.getName();
                             // Here we can catch some information from each user.
+
+
+
+
+
+
+
                             Log.e("LOGIN INFO", "Name: " + name );
                         }
                         catch (Exception e){
@@ -165,6 +173,7 @@ public class Login extends FragmentActivity {
         if (session.isOpened()) {
             final Context context = this;
             Intent intent = new Intent(context, Events.class);
+
             startActivity(intent);
         }
 
