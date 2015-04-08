@@ -13,7 +13,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -47,8 +46,6 @@ public class EventDetail extends ActionBarActivity {
             public void onClick(View v) {
                 Log.d("DETAILS", "CLICO");
                 Intent intent = new Intent(context, MapsActivity.class);
-
-
                 startActivity(intent);
             }
         });
@@ -57,7 +54,6 @@ public class EventDetail extends ActionBarActivity {
         Bundle extras = getIntent().getExtras();
         HashMap<String,String>  value = new HashMap<String,String> ();
         if (extras != null) {
-
             TextView name = (TextView) findViewById(R.id.txtName);
             ImageView picture = (ImageView) findViewById(R.id.imageView2);
             value =( HashMap<String,String>) extras.getSerializable("hash");
@@ -73,16 +69,13 @@ public class EventDetail extends ActionBarActivity {
             Log.d("DETAILS", value.toString());
         }
 
-
         ImageView picture = (ImageView) findViewById(R.id.imageView2);
         //picture.setBackground((Integer) value.get("picture"));
         right.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Save in the calendar
                 Log.d("Details", "Right");
-
               /*  Calendar cal = Calendar.getInstance();
->>>>>>> SaraivaBranch
                 Intent intent = new Intent(Intent.ACTION_EDIT);
                 intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("beginTime", cal.getTimeInMillis());
@@ -90,27 +83,19 @@ public class EventDetail extends ActionBarActivity {
                 intent.putExtra("rrule", "FREQ=YEARLY");
                 intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
                 intent.putExtra("title", "A Test Event from android app");
-<<<<<<< HEAD
-                startActivity(intent);
-                Intent intent2 = new Intent(context, Events.class);
-                startActivity(intent2);
-=======
                 startActivity(intent);*/
                 Intent intent = new Intent(context, Events.class);;
                 intent.putExtra("answer","right");
                 setResult(RESULT_OK, intent);
                 finish();
-
             }
         });
         left.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 Intent intent = new Intent(context, Events.class);;
                 intent.putExtra("answer","left");
                 setResult(RESULT_OK, intent);
                 finish();
-
 
             }
         });
