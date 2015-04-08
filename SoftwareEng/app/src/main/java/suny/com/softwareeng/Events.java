@@ -29,45 +29,20 @@ import butterknife.OnClick;
 public class Events extends Activity {
 
 
-
     private int i;
     public     SimpleAdapter adapter;
     public  List<HashMap<String,String>> aList;
-
     @InjectView(R.id.frame) SwipeFlingAdapterView flingContainer;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.events);
-        ButterKnife.inject(this);
-
-
-     /*   al = new ArrayList<>();
-        al.add("php");
-        al.add("c");
-        al.add("python");
-        al.add("java");
-        al.add("html");
-        al.add("c++");
-        al.add("css");
-        al.add("javascript");
-*/
-
-
-
-       
         super.onCreate(savedInstanceState);
         setContentView(R.layout.events);
         ButterKnife.inject(this);
         // Array of strings storing country names
         String[] countries = new String[] {
                 "Party",
-
                 "Pakistan",
                 "Sri Lanka",
                 "China",
@@ -78,11 +53,9 @@ public class Events extends Activity {
                 "South Korea",
                 "Japan"
         };
-
         // Array of integers points to images stored in /res/drawable-ldpi/
         int[] flags = new int[]{
                 R.drawable.party,
-
                 R.drawable.icon,
                 R.drawable.icon,
                 R.drawable.icon,
@@ -94,36 +67,32 @@ public class Events extends Activity {
                 R.drawable.icon
         };
 
-
         aList = new ArrayList<HashMap<String,String>>();
 
         for(int i=0;i<10;i++){
             HashMap<String, String> hm = new HashMap<String,String>();
             hm.put("EventName", "" + countries[i]);
              hm.put("picture", Integer.toString(flags[i]));
-
                 Log.d("LIST", Integer.toString(flags[i]));
                 aList.add(hm);
             }
 
             // Keys used in Hashmap
-
             String[] from = { "picture","EventName" };
             // Ids of views in listview_layout
             int[] to = { R.id.picture,R.id.eventText};
             // Instantiating an adapter to store each items
             // R.layout.listview_layout defines the layout of each item
              adapter = new SimpleAdapter(getBaseContext(), aList, R.layout.item, from, to);
-
             // Setting the adapter to the listView
            // listView.setAdapter(adapter);
         final Context context = this;
        // arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
-
        ImageButton findOut = (ImageButton) findViewById(R.id.findOut);
         findOut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(context, EventDetail.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 intent.putExtra("hash",aList.get(0));
                 startActivityForResult(intent,1);
             }
@@ -132,8 +101,8 @@ public class Events extends Activity {
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(context, MenuPage.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivityForResult(intent,1);
-
             }
         });
 
@@ -143,8 +112,6 @@ public class Events extends Activity {
             public void removeFirstObjectInAdapter() {
                 Log.d("LIST", "removed object!");
                 aList.remove(0);
-
-
                adapter.notifyDataSetChanged();
             }
 
@@ -164,7 +131,9 @@ public class Events extends Activity {
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
                 Intent intent = new Intent(context, Wait.class);
-                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
+                startActivityForResult(intent,1234);
             }
 
             @Override
@@ -179,11 +148,9 @@ public class Events extends Activity {
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {
-
                // makeToast(Events.this, "Clicked!");
                 Intent intent = new Intent(context, EventDetail.class);
                 startActivityForResult(intent,1);
-
             }
         });
 
@@ -192,7 +159,6 @@ public class Events extends Activity {
     static void makeToast(Context ctx, String s){
         Toast.makeText(ctx, s, Toast.LENGTH_SHORT).show();
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -216,7 +182,6 @@ public class Events extends Activity {
     @OnClick(R.id.right)
     public void right() {
        /*Calendar cal = Calendar.getInstance();
->>>>>>> SaraivaBranch
         Intent intent = new Intent(Intent.ACTION_EDIT);
         intent.setType("vnd.android.cursor.item/event");
         intent.putExtra("beginTime", cal.getTimeInMillis());
@@ -224,9 +189,6 @@ public class Events extends Activity {
         intent.putExtra("rrule", "FREQ=YEARLY");
         intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
         intent.putExtra("title", "A Test Event from android app");
-<<<<<<< HEAD
-        startActivity(intent);
-=======
         startActivity(intent);*/
         flingContainer.getTopCardListener().selectRight();
     }
@@ -235,9 +197,5 @@ public class Events extends Activity {
     public void left() {
         flingContainer.getTopCardListener().selectLeft();
     }
-
-
-
-
 
 }
