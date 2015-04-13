@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+        <string-array name="entries_list_preference">
+        <item>Right Now</item>
+        <item>Next 3 Hours</item>
+        <item>Today</item>
+        <item>This Week</item>
+        <item>This Month</item>
+        <item>All TIme</item>
+        </string-array>
+
+    <string-array name="entryvalues_list_preference">
+        <item>now</item>
+        <item>threehour</item>
+        <item>today</item>
+        <item>week</item>
+        <item>month</item>
+        <item>all</item>
+    </string-array>
+
+</resources>

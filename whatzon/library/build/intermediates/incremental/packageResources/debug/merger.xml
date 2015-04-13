@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/Tebaldi52/Desktop/whatzon 2.57.40 PM/library/src/main/res"><file path="/Users/Tebaldi52/Desktop/whatzon 2.57.40 PM/library/src/main/res/values/attrs.xml" qualifiers=""><declare-styleable name="SwipeFlingAdapterView">
+        <attr format="reference" name="SwipeFlingStyle"/>
+        <attr format="float" name="rotation_degrees"/>
+        <attr format="integer" name="min_adapter_stack"/>
+        <attr format="integer" name="max_visible"/>
+    </declare-styleable></file><file path="/Users/Tebaldi52/Desktop/whatzon 2.57.40 PM/library/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">Fling Swipe Cards</string></file><file path="/Users/Tebaldi52/Desktop/whatzon 2.57.40 PM/library/src/main/res/values/styles.xml" qualifiers=""><style name="SwipeFling">
+        <item name="rotation_degrees">15</item>
+        <item name="min_adapter_stack">6</item>
+        <item name="max_visible">4</item>
+    </style></file></source><source path="/Users/Tebaldi52/Desktop/whatzon 2.57.40 PM/library/build/generated/res/rs/debug"/><source path="/Users/Tebaldi52/Desktop/whatzon 2.57.40 PM/library/build/generated/res/generated/debug"/></dataSet><dataSet config="debug"><source path="/Users/Tebaldi52/Desktop/whatzon 2.57.40 PM/library/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SwipeFlingAdapterView"><attr format="reference" name="SwipeFlingStyle"/><attr format="float" name="rotation_degrees"/><attr format="integer" name="min_adapter_stack"/><attr format="integer" name="max_visible"/></declare-styleable></configuration></mergedItems></merger>
