@@ -83,8 +83,6 @@ public class MapsActivity extends FragmentActivity {
 
 
 
-
-
     private void createMapView() {
         /**
          * Catch the null pointer exception that

@@ -8,16 +8,12 @@
     android:background="#ffffffff">
 
     <ImageView
-
         android:layout_width="250dp"
         android:layout_height="150dp"
-
         android:id="@+id/imageView2"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="168dp"
         android:layout_below="@+id/txtName"
-
-
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -36,7 +32,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-
         android:text="02/02/15"
         android:id="@+id/txtDate"
         android:layout_marginTop="65dp"
@@ -48,7 +43,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-
         android:text="14h"
         android:id="@+id/txtTime"
         android:layout_below="@+id/txtDate"
@@ -58,7 +52,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="135dp"
-
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Description"
         android:id="@+id/txtDescription"
@@ -67,8 +60,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:phoneNumber="false"
-
-
         android:layout_alignParentBottom="true"
         android:textColor="#ff000000" />
 
@@ -79,10 +70,8 @@
         android:text="Adress"
         android:id="@+id/txtAdress"
         android:textColor="#ff000000"
-
         android:layout_above="@+id/txtDescription"
         android:layout_toEndOf="@+id/btnMenu" />
-
 
     <ImageButton
         android:layout_width="30dp"
@@ -100,10 +89,8 @@
         android:id="@+id/btnNo"
         android:adjustViewBounds="false"
         android:background="@drawable/no"
-
         android:layout_above="@+id/txtName"
         android:layout_alignEnd="@+id/txtDescription" />
-
 
     <ImageButton
         android:layout_width="30dp"
@@ -111,18 +98,14 @@
         android:id="@+id/btnYes"
         android:background="@drawable/yes"
         android:layout_alignParentTop="true"
-
         android:layout_alignEnd="@+id/txtDate" />
-
 
     <ImageButton
         android:layout_width="25dp"
         android:layout_height="30dp"
         android:id="@+id/btnMaps"
         android:background="@drawable/map"
-
         android:layout_alignTop="@+id/txtAdress"
-
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>

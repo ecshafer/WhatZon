@@ -21,6 +21,7 @@
         android:name="com.pgi.routviewer.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
+    <uses-permission android:name="suny.com.softwareeng.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
     <application
@@ -35,7 +36,7 @@
             android:value="AIzaSyAB6Qp5xaWZ3Vh4Zh_u0bSkjnPvz0Wwv2k" />
 
         <activity
-            android:name="suny.com.softwareeng.WatZonLogin"
+            android:name="suny.com.softwareeng.Login"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
@@ -55,7 +56,9 @@
 
         <activity
             android:name="suny.com.softwareeng.Events"
-            android:label="@string/app_name" >
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name="suny.com.softwareeng.EventDetail"

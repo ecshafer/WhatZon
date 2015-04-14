@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     
     <PreferenceCategory
+
             android:title="@string/inline_preferences">
             
         <CheckBoxPreference
                 android:key="checkbox_preference1"
+
                 android:title="@string/title_checkbox_preference1"/>
 
         <CheckBoxPreference

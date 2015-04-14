@@ -150,12 +150,6 @@ public class Login extends FragmentActivity {
                              name = user.getName();
                             // Here we can catch some information from each user.
 
-
-
-
-
-
-
                             Log.e("LOGIN INFO", "Name: " + name );
                         }
                         catch (Exception e){
