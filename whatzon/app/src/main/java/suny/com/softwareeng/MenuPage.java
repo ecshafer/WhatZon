@@ -9,11 +9,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
+
+import static suny.com.softwareeng.R.id.button1;
 
 
 public class MenuPage extends ActionBarActivity {
 
+    public void toAllEvents(View view){
+        final Context context = this;
+        Intent intent = new Intent(context, AllEvents.class);
+        startActivity(intent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -38,6 +46,7 @@ public class MenuPage extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
     }
 
 

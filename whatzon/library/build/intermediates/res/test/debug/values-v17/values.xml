@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v17/values.xml -->
+    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v17/values.xml -->
     <eat-comment/>
     <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="android:Widget">
         <item name="android:layout_gravity">center_vertical|start</item>

@@ -2,80 +2,92 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="suny.com.softwareeng"
     android:versionCode="1"
+    android:versionName="1.0" >
 
-    android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="9"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-sdk android:minSdkVersion="9" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <permission
         android:name="com.pgi.routviewer.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="suny.com.softwareeng.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
-    <application android:label="WhatZon"
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
         android:icon="@drawable/ic_launcher"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
-        >
+        android:label="WhatZon"
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAB6Qp5xaWZ3Vh4Zh_u0bSkjnPvz0Wwv2k" />
-        <activity android:name=".Login"
+
+        <activity
+            android:name=".Login"
             android:label="@string/app_name"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.facebook.LoginActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:label="@string/app_name" />
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
         <activity
+            android:name="com.facebook.LoginActivity"
             android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name=".Events"
             android:alwaysRetainTaskState="true"
-            android:launchMode="singleInstance"
-            android:name=".Events" >
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
         </activity>
         <activity
-            android:label="WhatZon"
-
-            android:name=".EventDetail" >
+            android:name=".EventDetail"
+            android:label="WhatZon" >
         </activity>
         <activity
-            android:label="WhatZon"
-
-            android:name=".AddEvent" >
+            android:name=".AddEvent"
+            android:label="WhatZon" >
         </activity>
         <activity
-            android:label="WhatZon"
-
-            android:name=".MenuPage" >
+            android:name=".MenuPage"
+            android:label="WhatZon" >
         </activity>
         <activity
-            android:label="WhatZon"
-
-            android:name=".Preferences" >
+            android:name=".Preferences"
+            android:label="WhatZon" >
         </activity>
         <activity
-            android:label="WhatZon"
-
-            android:name=".MapsActivity" >
+            android:name=".MapsActivity"
+            android:label="WhatZon" >
         </activity>
         <activity
-            android:label="WhatZon"
-
-            android:name=".Wait" >
+            android:name=".Wait"
+            android:label="WhatZon" >
+        </activity>
+        <activity
+            android:name=".AllEvents"
+            android:label="@string/title_activity_all_events" >
         </activity>
     </application>
+
 </manifest>

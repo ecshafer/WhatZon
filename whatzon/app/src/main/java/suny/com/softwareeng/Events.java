@@ -12,9 +12,20 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -28,11 +39,11 @@ import butterknife.OnClick;
 
 public class Events extends Activity {
 
-
     private int i;
     public     SimpleAdapter adapter;
     public  List<HashMap<String,String>> aList;
     @InjectView(R.id.frame) SwipeFlingAdapterView flingContainer;
+
 
 
     @Override
@@ -40,6 +51,7 @@ public class Events extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.events);
         ButterKnife.inject(this);
+
         // Array of strings storing country names
         String[] countries = new String[] {
                 "Party",
@@ -53,6 +65,9 @@ public class Events extends Activity {
                 "South Korea",
                 "Japan"
         };
+
+
+
         // Array of integers points to images stored in /res/drawable-ldpi/
         int[] flags = new int[]{
                 R.drawable.party,
@@ -125,6 +140,7 @@ public class Events extends Activity {
 
             @Override
             public void onRightCardExit(Object dataObject) {
+
                 makeToast(Events.this, "Right!");
             }
 

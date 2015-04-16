@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-fa/values.xml -->
+    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-fa/values.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"پیمایش به صفحه اصلی"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"‏%1$s‏، %2$s"</string>
@@ -17,7 +17,7 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"جستجوی شفاهی"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"اشتراک‌گذاری با"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"‏اشتراک‌گذاری با %s"</string>
-    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-fa/common_strings.xml -->
+    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-fa/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"‏برنامه باید به برنامه Android Wear به‌روزرسانی شود."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"‏این برنامه اجرا نمی‌شود مگر اینکه برنامه Android Wear را به‌روزرسانی کنید."</string>
@@ -47,7 +47,7 @@
     <string msgid="411506735369601515" name="common_open_on_phone">"باز کردن در تلفن"</string>
     <string msgid="9071884888741449141" name="common_signin_button_text">"ورود به سیستم"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"‏ورود به سیستم با Google‎"</string>
-    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/values-fa/values.xml -->
+    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/values-fa/values.xml -->
     <eat-comment/>
     <string msgid="6133362019475930048" name="lb_playback_controls_closed_captioning_disable">"غیرفعال کردن زیرنویس"</string>
     <string msgid="2429655367176440226" name="lb_playback_controls_closed_captioning_enable">"فعال کردن زیرنویس"</string>
@@ -73,7 +73,7 @@
     <string msgid="5511270823320183816" name="lb_search_bar_hint_speech">"برای جستجو صحبت کنید"</string>
     <string msgid="1627103380996590035" name="lb_search_bar_hint_with_title">"جستجوی <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
     <string msgid="2712734639766312034" name="lb_search_bar_hint_with_title_speech">"جستجو با گفتن <ns1:g id="SEARCH_CONTEXT">%1$s</ns1:g>"</string>
-    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/21.0.3/res/values-fa/values.xml -->
+    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/21.0.3/res/values-fa/values.xml -->
     <eat-comment/>
     <string msgid="8327680881775995150" name="mr_media_route_button_content_description">"فرستادن"</string>
     <string msgid="7553005460920830010" name="mr_media_route_chooser_searching">"در حال جستجو برای دستگاه‌ها..."</string>
@@ -81,7 +81,7 @@
     <string msgid="109793632378378069" name="mr_media_route_controller_disconnect">"قطع ارتباط"</string>
     <string msgid="5441529851481176817" name="mr_system_route_name">"سیستم"</string>
     <string msgid="7498112907524977311" name="mr_user_route_category_name">"دستگاه‌ها"</string>
-    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/values-fa/values.xml -->
+    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/values-fa/values.xml -->
     <eat-comment/>
     <string msgid="5651268540267663887" name="orb_search_action">"عملکرد جستجو"</string>
 </resources>

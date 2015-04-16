@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml -->
+    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
@@ -269,7 +269,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
     </style>
-    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/values-v21/values.xml -->
+    <!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.LeanbackBase" parent="android:TextAppearance.Material"/>
     <style name="Theme.LeanbackBase" parent="android:Theme.Material.NoActionBar">

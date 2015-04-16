@@ -28,4 +28,4 @@
       android:interpolator="@android:interpolator/linear_out_slow_in" />
   <changeImageTransform
       android:interpolator="@android:interpolator/linear_out_slow_in"/>
-</transitionSet><!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/transition-v21/lb_shared_element_enter_transition.xml -->
+</transitionSet><!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/transition-v21/lb_shared_element_enter_transition.xml -->

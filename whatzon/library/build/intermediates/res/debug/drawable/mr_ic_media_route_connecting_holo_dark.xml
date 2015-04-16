@@ -22,4 +22,4 @@
     <item android:drawable="@drawable/mr_ic_media_route_on_2_holo_dark" android:duration="500" />
     <item android:drawable="@drawable/mr_ic_media_route_on_1_holo_dark" android:duration="500" />
 </animation-list>
-<!-- From: file:/Users/Tebaldi52/Desktop/whatzon%202.57.40%20PM/library/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/21.0.3/res/drawable/mr_ic_media_route_connecting_holo_dark.xml -->
+<!-- From: file:/Users/Tebaldi52/Desktop/whatzon/library/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/21.0.3/res/drawable/mr_ic_media_route_connecting_holo_dark.xml -->
