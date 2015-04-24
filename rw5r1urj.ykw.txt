@@ -1,0 +1,49 @@
+﻿Merge branch 'SaraivaBranch'
+
+Conflicts:
+	SoftwareEng/app/src/main/AndroidManifest.xml
+	SoftwareEng/app/src/main/java/suny/com/softwareeng/AddEvent.java
+	SoftwareEng/app/src/main/java/suny/com/softwareeng/Event.java
+	SoftwareEng/app/src/main/java/suny/com/softwareeng/EventDetail.java
+	SoftwareEng/app/src/main/java/suny/com/softwareeng/Events.java
+	SoftwareEng/app/src/main/java/suny/com/softwareeng/MapsActivity.java
+	SoftwareEng/app/src/main/res/layout/activity_event_detail.xml
+	SoftwareEng/app/src/main/res/layout/activity_menu_page.xml
+	SoftwareEng/app/src/main/res/layout/addevent.xml
+	SoftwareEng/app/src/main/res/layout/item.xml
+	SoftwareEng/app/src/main/res/layout/ldbuttons.xml
+	SoftwareEng/facebook/build/intermediates/bundles/release/classes.jar
+	SoftwareEng/facebook/build/outputs/aar/facebook-release.aar
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   SoftwareEng/app/src/main/AndroidManifest.xml
+#	modified:   SoftwareEng/app/src/main/java/suny/com/softwareeng/AddEvent.java
+#	modified:   SoftwareEng/app/src/main/java/suny/com/softwareeng/Event.java
+#	modified:   SoftwareEng/app/src/main/java/suny/com/softwareeng/EventDetail.java
+#	modified:   SoftwareEng/app/src/main/java/suny/com/softwareeng/Events.java
+#	new file:   SoftwareEng/app/src/main/java/suny/com/softwareeng/Login.java
+#	modified:   SoftwareEng/app/src/main/java/suny/com/softwareeng/MapsActivity.java
+#	new file:   SoftwareEng/app/src/main/res/drawable-xxhdpi/party.jpg
+#	modified:   SoftwareEng/app/src/main/res/layout/activity_event_detail.xml
+#	modified:   SoftwareEng/app/src/main/res/layout/activity_menu_page.xml
+#	modified:   SoftwareEng/app/src/main/res/layout/addevent.xml
+#	modified:   SoftwareEng/app/src/main/res/layout/item.xml
+#	modified:   SoftwareEng/app/src/main/res/layout/ldbuttons.xml
+#	modified:   SoftwareEng/app/src/main/res/menu/menu_wat_zon_login.xml
+#	new file:   SoftwareEng/app/src/main/res/party.jpg
+#	modified:   SoftwareEng/app/src/main/res/values/strings.xml
+#
+

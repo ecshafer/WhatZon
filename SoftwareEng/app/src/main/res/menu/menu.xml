@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Single menu item
+     Set id, icon and Title for each menu item
+-->
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/preferences"
+        android:title="Share" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/calendar"
+        android:icon="@drawable/calend"
+        android:title="Calendar" />
+
+    <item
+        android:id="@+id/newevent"
+        android:icon="@drawable/addevent"
+        android:title="New Event" />
+
+</menu>

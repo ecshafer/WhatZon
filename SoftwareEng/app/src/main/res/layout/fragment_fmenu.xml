@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="suny.com.softwareeng.Fmenu"
+    android:background="@drawable/menubg"  android:id="@+id/popup">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnProfile"
+        android:background="@drawable/mpreferences"
+        android:layout_gravity="left|center_vertical"
+        android:layout_below="@+id/btnSettings"
+        android:layout_alignStart="@+id/btnNew"
+        android:layout_marginTop="56dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSettings"
+
+        android:nestedScrollingEnabled="false"
+        android:background="@drawable/msettings"
+        android:layout_gravity="right|bottom"
+        android:adjustViewBounds="false"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/btnProfile"
+        android:layout_marginTop="64dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCalendar"
+        android:background="@drawable/mcalend"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_below="@+id/btnNew"
+        android:layout_alignStart="@+id/btnNew"
+        android:layout_marginTop="74dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNew"
+        android:background="@drawable/mnew"
+        android:layout_gravity="left|top"
+        android:layout_below="@+id/btnProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:focusable="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnClose"
+        android:background="@drawable/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

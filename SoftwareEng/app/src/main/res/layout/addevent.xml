@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/add"
+    android:rowCount="15"
+    android:columnCount="11">
+
+    <ImageButton
+
+        android:id="@+id/menuBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/menu_purple"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_row="0"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="49dp"
+        android:text="Title *"
+        android:textColor="#ff6e058f"
+        android:textSize="25dp"
+        android:id="@+id/textView"
+        android:layout_row="1"
+        android:layout_column="0" />
+
+    <EditText
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="#000"
+        android:ems="10"
+        android:id="@+id/Title"
+        android:layout_row="1"
+        android:layout_column="10"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:editable="true"
+        android:backgroundTint="#0F0E0A" />
+
+    <TextView
+        android:layout_width="132dp"
+        android:layout_height="49dp"
+        android:text="Location *"
+        android:textColor="#ff6e058f"
+        android:textSize="25dp"
+        android:id="@+id/textView2"
+        android:layout_row="2"
+        android:layout_column="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:lines="2"
+        android:textColor="#000"
+        android:id="@+id/Location"
+        android:layout_row="2"
+        android:layout_column="10"
+        android:backgroundTint="#0F0E0A" />
+
+    <TextView
+        android:layout_width="132dp"
+        android:layout_height="45dp"
+        android:text="Date *"
+        android:textColor="#ff6e058f"
+        android:textSize="25dp"
+        android:id="@+id/textView3"
+        android:layout_row="3"
+        android:layout_column="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:textColor="#000"
+        android:id="@+id/Date"
+        android:layout_row="3"
+        android:layout_column="10"
+        android:backgroundTint="#0F0E0A" />
+
+    <TextView
+        android:layout_width="132dp"
+        android:layout_height="42dp"
+        android:text="Time *"
+        android:textColor="#ff6e058f"
+        android:textSize="25dp"
+        android:id="@+id/textView4"
+        android:layout_row="4"
+        android:layout_column="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:textColor="#000"
+        android:id="@+id/Time"
+        android:layout_row="4"
+        android:layout_column="10"
+        android:backgroundTint="#0F0E0A" />
+    <TextView
+        android:layout_width="132dp"
+        android:layout_height="42dp"
+        android:text="Tags *"
+        android:textColor="#ff6e058f"
+        android:textSize="25dp"
+        android:id="@+id/textView7"
+        android:layout_row="8"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="132dp"
+        android:layout_height="42dp"
+        android:text="Picture"
+        android:textColor="#ff6e058f"
+        android:textSize="25dp"
+        android:id="@+id/textView6"
+        android:layout_row="5"
+        android:layout_column="0" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse"
+        android:id="@+id/browseBtn"
+        android:layout_row="5"
+        android:layout_column="10"
+        android:layout_gravity="right"
+        android:layout_rowSpan="1"
+        android:layout_rowWeight="0"
+        android:background="#ff6e058f"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:text="More Info"
+        android:textColor="#ff6e058f"
+        android:textSize="25dp"
+        android:id="@+id/textView5"
+        android:layout_row="6"
+        android:layout_column="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:textColor="#000"
+        android:ems="10"
+        android:id="@+id/MoreInfo"
+        android:layout_row="6"
+        android:layout_column="10"
+        android:backgroundTint="#0F0E0A" />
+
+    <ScrollView
+        android:layout_width="198dp"
+        android:layout_height="128dp"
+        android:id="@+id/Scroll"
+        android:layout_row="8"
+        android:layout_column="10"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <CheckBox
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:text="Music"
+                android:id="@+id/musicBox"
+                android:clickable="true"
+                android:textColor="#ff6e058f"
+                android:textSize="20dp"
+                android:checked="false" />
+            <CheckBox
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:text="Party"
+                android:id="@+id/partyBox"
+                android:clickable="true"
+                android:textColor="#ff6e058f"
+                android:textSize="20dp" />
+            <CheckBox
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:text="Movies"
+                android:id="@+id/moviesBox"
+                android:clickable="true"
+                android:textColor="#ff6e058f"
+                android:textSize="20dp" />
+            <CheckBox
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:text="Education"
+                android:id="@+id/educationBox"
+                android:clickable="true"
+                android:textColor="#ff6e058f"
+                android:textSize="20dp" />
+            <CheckBox
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:text="Politics"
+                android:id="@+id/politcsBox"
+                android:clickable="true"
+                android:textColor="#ff6e058f"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:id="@+id/btnNo"
+        android:adjustViewBounds="false"
+        android:background="@drawable/no"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/txtDate"
+        android:layout_toStartOf="@+id/txtDate"
+        android:layout_row="14"
+        android:layout_column="0" />
+
+    <ImageButton
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:id="@+id/btnYes"
+        android:background="@drawable/yes"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2"
+        android:layout_row="14"
+        android:layout_column="10"
+        android:onClick="add"
+        android:layout_gravity="right" />
+
+</GridLayout>

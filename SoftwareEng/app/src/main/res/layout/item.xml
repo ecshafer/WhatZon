@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_width="350dp"
+
+    android:layout_height="300dp">
+
+    <View
+        android:id="@+id/item_swipe_left_indicator"
+        android:alpha="0"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+       />
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        />
+    <View
+        android:id="@+id/item_swipe_right_indicator"
+        android:alpha="0"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="right"
+      />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/eventText"
+            android:layout_width="310dp"
+            android:layout_height="87dp"
+            android:textSize="20dp"
+            android:text ="HelloWorld"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.42" />
+
+
+
+    </LinearLayout>
+
+</FrameLayout>
