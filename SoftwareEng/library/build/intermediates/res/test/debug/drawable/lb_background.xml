@@ -23,4 +23,4 @@
     <item android:drawable="@color/lb_grey" android:id="@+id/background_imagein"/>
     <item android:drawable="@color/lb_background_protection" android:id="@+id/background_dim" />
 </layer-list>
-<!-- From: file:/C:/Users/Lucas/SoftwareEngineering/SoftwareEng/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/drawable/lb_background.xml -->
+<!-- From: file:/C:/Users/Lucas/Desktop/WhatZon-MatthewBranch/SoftwareEng/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/drawable/lb_background.xml -->

@@ -10,8 +10,10 @@ public class Tags {
     private boolean politicsTg;
     private boolean movieTg;
     private boolean educationTg;
-    public Tags(boolean musicTg,boolean partyTg,boolean politicsTg, boolean movieTg, boolean educationTg){
+    private boolean foodTg;
+    public Tags(boolean musicTg,boolean partyTg,boolean politicsTg, boolean movieTg, boolean educationTg,boolean foodTg){
         this.musicTg = musicTg;
+        this.foodTg = foodTg;
         this.partyTg = partyTg;
         this.politicsTg = politicsTg;
         this.movieTg = movieTg;
@@ -49,10 +51,65 @@ public class Tags {
         return educationTg;
 
     }
+    public void setFoodTg(boolean foodTg) {
+        this.foodTg = foodTg;
+    }
+    public boolean getFoodTg() throws IllegalStateException {
+        return foodTg;
 
+    }
     @Override
     public String toString(){
-        return "Music:"+getMusicTg()+"\nParty"+getpartyTg()+"\nPolitics"+getPolitcsTg()+"\nEducation"+geteducationTg()+"\nMovies"+getMovieTg();
+        String tags="";
+        int flag = 0;
+        if(!getMusicTg()==false){
+            tags+="Music";
+            flag=1;
+        }
+        if(flag == 1){
+            tags+=",";
+            flag=0;
+        }
+        if(!geteducationTg()==false)
+            tags+="Education,";
+        if(flag == 1){
+            tags+=",";
+            flag=0;
+        }
+        if(!getMovieTg()==false)
+            tags+="Movie,";
+        if(flag == 1){
+            tags+=",";
+            flag=0;
+        }
+
+        if(!getpartyTg()==false)
+            tags+="Party,";
+        if(flag == 1){
+            tags+=",";
+            flag=0;
+        }
+
+        if(!getPolitcsTg()==false)
+            tags+="Politics,";
+        if(flag == 1){
+            tags+=",";
+
+        }
+        if(!getFoodTg()==false)
+            tags+="Food,";
+        if(flag == 1){
+            tags+=",";
+
+        }
+        if(tags.length() != 0)
+        tags= tags.substring(0,(tags.length()-1));
+
+        tags+=".";
+
+
+
+        return tags;
     }
 
 

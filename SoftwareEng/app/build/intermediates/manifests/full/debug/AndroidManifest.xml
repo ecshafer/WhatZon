@@ -23,11 +23,12 @@
 
     <uses-permission android:name="suny.com.softwareeng.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:icon="@drawable/ic_launcher"
         android:label="WhatZon"
-        android:theme="@style/Theme.AppCompat.NoActionBar" >
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -57,8 +58,7 @@
         <activity
             android:name="suny.com.softwareeng.Events"
             android:alwaysRetainTaskState="true"
-            android:label="@string/app_name"
-            android:launchMode="singleInstance" >
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name="suny.com.softwareeng.EventDetail"
@@ -74,7 +74,8 @@
         </activity>
         <activity
             android:name="suny.com.softwareeng.Preferences"
-            android:label="WhatZon" >
+            android:label="WhatZon"
+            android:launchMode="singleInstance" >
         </activity>
         <activity
             android:name="suny.com.softwareeng.MapsActivity"
@@ -82,6 +83,10 @@
         </activity>
         <activity
             android:name="suny.com.softwareeng.Wait"
+            android:label="WhatZon" >
+        </activity>
+        <activity
+            android:name="suny.com.softwareeng.UserProfile"
             android:label="WhatZon" >
         </activity>
     </application>

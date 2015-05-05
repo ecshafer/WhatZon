@@ -22,4 +22,4 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     style="?attr/itemsVerticalGridStyle" />
-<!-- From: file:/C:/Users/Lucas/SoftwareEngineering/SoftwareEng/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/layout/lb_vertical_grid.xml -->
+<!-- From: file:/C:/Users/Lucas/Desktop/WhatZon-MatthewBranch/SoftwareEng/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/layout/lb_vertical_grid.xml -->

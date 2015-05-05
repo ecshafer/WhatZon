@@ -18,7 +18,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/main_ui_container"
-            android:background="#F0F0F0"
+            android:background="@drawable/fundo"
             android:layout_gravity="center">
 
 

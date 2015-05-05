@@ -12,26 +12,27 @@
     <ImageButton
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/imageButton"
+        android:id="@+id/btnProfile"
         android:background="@drawable/preferences"
         android:layout_above="@+id/Time"
-        android:layout_alignStart="@+id/Time" />
+        android:layout_alignStart="@+id/Time"
+        android:layout_alignParentEnd="true" />
 
     <ImageButton
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/preferences"
+        android:id="@+id/btnSettings"
 
         android:nestedScrollingEnabled="false"
         android:background="@drawable/settings"
         android:layout_above="@+id/Date"
-        android:layout_alignStart="@+id/addEvents" />
+        android:layout_alignStart="@+id/btnNew" />
 
     <ImageButton
         android:layout_width="80dp"
 
         android:layout_height="80dp"
-        android:id="@+id/addEvents"
+        android:id="@+id/btnNew"
         android:background="@drawable/addevent"
         android:layout_marginEnd="65dp"
         android:layout_below="@+id/Date"
@@ -44,7 +45,7 @@
         android:id="@+id/Time"
         android:textColor="#000"
         android:text="Profile"
-        android:layout_above="@+id/addEvents"
+        android:layout_above="@+id/btnNew"
         android:layout_alignParentStart="true"
         android:layout_marginStart="40dp" />
 
@@ -63,8 +64,8 @@
         android:id="@+id/Title"
         android:textColor="#000"
         android:text="Calendar"
-        android:layout_below="@+id/imageButton2"
-        android:layout_alignStart="@+id/imageButton2" />
+        android:layout_below="@+id/btnCalendar"
+        android:layout_alignStart="@+id/btnCalendar" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,13 +74,13 @@
         android:textColor="#000"
         android:text="Add Event"
         android:layout_alignTop="@+id/Title"
-        android:layout_alignEnd="@+id/addEvents" />
+        android:layout_alignEnd="@+id/btnNew" />
 
     <ImageButton
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/imageButton2"
-        android:background="@drawable/calendar"
-        android:layout_alignTop="@+id/addEvents"
+        android:id="@+id/btnCalendar"
+        android:background="@drawable/calend"
+        android:layout_alignTop="@+id/btnNew"
         android:layout_alignStart="@+id/Time" />
 </RelativeLayout>

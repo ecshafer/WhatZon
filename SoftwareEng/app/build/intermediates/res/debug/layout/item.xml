@@ -16,8 +16,7 @@
     <ImageView
         android:id="@+id/picture"
         android:layout_width="350dp"
-        android:layout_height="200dp"
-
+        android:layout_height="214dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
@@ -42,13 +41,11 @@
             android:layout_height="87dp"
             android:textSize="20dp"
             android:text ="HelloWorld"
+            android:textColor="#FFFFFF"
             android:background="#000000"
             android:gravity="center"
             android:layout_gravity="bottom"
             android:layout_weight="1.42" />
-
-
-
     </LinearLayout>
 
-</FrameLayout><!-- From: file:/C:/Users/Lucas/SoftwareEngineering/SoftwareEng/app/src/main/res/layout/item.xml -->
+</FrameLayout><!-- From: file:/C:/Users/Lucas/Desktop/WhatZon-MatthewBranch/SoftwareEng/app/src/main/res/layout/item.xml -->

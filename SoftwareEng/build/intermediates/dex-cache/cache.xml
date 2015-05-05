@@ -2,74 +2,116 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp-urlconnection\2.0.0\afe8399d352713b66e597e9670c741d1e60ae923\okhttp-urlconnection-2.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="afe8399d352713b66e597e9670c741d1e60ae923">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-2.0.0-8d0ad34bdbb0f2ac8468e21c86dcc7b932c5e680.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\gson-2.3-3b3a519dc598632ed6d8183d2929ff40d1786bca.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-0d13306feb8ef5c25647cf3f2934798075fe0b6d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\libs\voleyLibrary-1.0.15.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9093a362d18c5f81f58e49d86dece57d9b6e1cb7">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\voleyLibrary-1.0.15-923121b9fa65c1675ad815eaec021f1052eff349.jar" />
+    </item>
+    <item
         jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\6.1.0\63735f48b82bcd24cdd33821342428252eb1ca5a\butterknife-6.1.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\butterknife-6.1.0-b631554a9e6831e0ae5ce41db44c35f23136d751.jar" />
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\butterknife-6.1.0-b631554a9e6831e0ae5ce41db44c35f23136d751.jar" />
     </item>
     <item
-        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.lorentzos.swipecards\library\1.0.8\classes.jar"
+        jar="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\exploded-aar\com.facebook.android\facebook\3.23.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6092e9f1550b59dcc70ed6fd57d7f185781c54c8">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-0f2d4596dc3c33569c44162f9bef121f5bba0eda.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.0.0\4c8d1536dba3812cc1592090dc20c47a4ed3c35e\okhttp-2.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4c8d1536dba3812cc1592090dc20c47a4ed3c35e">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\okhttp-2.0.0-f5b4ff19e6e4739eefe06e820aee43d94a6cf223.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\picasso-2.4.0-bacbd534397e3f5e58484f95fef9daf212cf18d3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\exploded-aar\com.lorentzos.swipecards\library\1.0.8\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="47b79d52e1e93e85c61ca1b8ba1253bd6f299244">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-9a5d61727a0d099b127be02c221d388153f597cc.jar" />
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-1458e5dd9429aef331eda3b030d4612bcff8ab0c.jar" />
     </item>
     <item
-        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jar="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-4b5e7e4252ec36f8fc0381c80ce2452d3b05d4cc.jar" />
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-91453526b8290eea6fbdeb5ec0e016eb362654d6.jar" />
     </item>
     <item
-        jar="C:\Users\Lucas\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.0.0\2534c458682c73f5b9871131ab3098d3f987ca3\okio-1.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-76e0f68cca10d78bb35e77ec1d9bd721e956f20a.jar" />
+        sha1="02534c458682c73f5b9871131ab3098d3f987ca3">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\okio-1.0.0-f895c6fd0cf74a808ed7f76b7c191b69ebf0327f.jar" />
     </item>
     <item
-        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jar="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-5625085395a8551e0cf6fb38cb9109e636ddf90d.jar" />
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-9987330438ac6c56ecb7888a51fe067c3033430e.jar" />
     </item>
     <item
-        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-25cd39fefdf012030ac0564872c4e7be74caeaa6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\libs\voleyLibrary-1.0.15.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="9093a362d18c5f81f58e49d86dece57d9b6e1cb7">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\voleyLibrary-1.0.15-e4105c487e9fb56e5939342d8ab1bbc1e0fba1dd.jar" />
-    </item>
-    <item
-        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\classes.jar"
+        jar="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-0a794b6fc77f4065047805ebdc7dd602c5adebdf.jar" />
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-00200116582fc7cad2bb2d3b3c4d59d406490f3b.jar" />
     </item>
     <item
-        jar="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\exploded-aar\com.facebook.android\facebook\3.23.0\classes.jar"
+        jar="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e780951bebb094ee47ab7b66f8c9a784d0a6ea2d">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-7a81c69773432786a08b747a60163f98759a4008.jar" />
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\classes-7c90615a6cfa45932643c6e92a8b22ef985701d8.jar" />
     </item>
     <item
         jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.1.4\129874135e6081269ace2312092031558865de12\bolts-android-1.1.4.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="129874135e6081269ace2312092031558865de12">
-        <dex dex="C:\Users\Lucas\SoftwareEngineering\SoftwareEng\app\build\intermediates\pre-dexed\debug\bolts-android-1.1.4-633c109099b05830bac77eb66b4d30f2e8f43b46.jar" />
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\bolts-android-1.1.4-633c109099b05830bac77eb66b4d30f2e8f43b46.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lucas\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.7.0\cc6807da6fdf91bea1b6a4a90c3818dac27d335f\retrofit-1.7.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cc6807da6fdf91bea1b6a4a90c3818dac27d335f">
+        <dex dex="C:\Users\Lucas\Desktop\WhatZon-MatthewBranch\SoftwareEng\app\build\intermediates\pre-dexed\debug\retrofit-1.7.0-8244e2700fbc2d7ce6cf81ff29973f8c0778c4bc.jar" />
     </item>
 
 </items>

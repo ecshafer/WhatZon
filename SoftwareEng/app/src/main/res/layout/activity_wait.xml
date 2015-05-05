@@ -10,7 +10,7 @@
     <ImageButton
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:id="@+id/btnMenu"
+        android:id="@+id/menuBtn"
         android:background="@drawable/menu_purple"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:background="@drawable/name"
-        android:layout_below="@+id/btnMenu"
+        android:layout_below="@+id/menuBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 

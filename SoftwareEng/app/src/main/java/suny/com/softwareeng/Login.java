@@ -4,6 +4,7 @@ package suny.com.softwareeng;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -11,10 +12,12 @@ import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.facebook.AppEventsLogger;
 import com.facebook.FacebookAuthorizationException;
 import com.facebook.FacebookOperationCanceledException;
@@ -27,19 +30,17 @@ import com.facebook.model.GraphUser;
 import com.facebook.widget.FacebookDialog;
 import com.facebook.widget.LoginButton;
 
-
-
-
-
-import suny.com.softwareeng.R;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Login extends FragmentActivity {
     private LoginButton loginButton;
     private PendingAction pendingAction = PendingAction.NONE;
     private ViewGroup controlsContainer;
     private GraphUser user;
-    public static String name;
-    private ImageView image;
+    public Context context;
+    public static String name,id;
+
     private enum PendingAction {
         NONE,
     }
@@ -70,13 +71,17 @@ public class Login extends FragmentActivity {
         uiHelper = new UiLifecycleHelper(this, callback);
         uiHelper.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        context = this;
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setUserInfoChangedCallback(new LoginButton.UserInfoChangedCallback() {
             @Override
             public void onUserInfoFetched(GraphUser user) {
                 Login.this.user = user;
-                updateUI();
-                handlePendingAction();
+                Session session = Session.getActiveSession();
+                if(session.isOpened()) {
+                   updateUI();
+                    handlePendingAction();
+                }
             }
         });
         controlsContainer = (ViewGroup) findViewById(R.id.main_ui_container);
@@ -138,7 +143,12 @@ public class Login extends FragmentActivity {
         } else if (state == SessionState.OPENED_TOKEN_UPDATED){
             handlePendingAction();
         }
-        updateUI();
+       /* if(state.isOpened()){
+            final Context context = this;
+            Intent intent = new Intent(context, Events.class);
+            startActivity(intent);
+        }
+        updateUI();*/
     }
     private void getUserData(Session session, SessionState state){
         if (state.isOpened()){
@@ -148,9 +158,38 @@ public class Login extends FragmentActivity {
                     if (response != null){
                         try{
                              name = user.getName();
-                            // Here we can catch some information from each user.
+                             id = user.getId();
 
-                            Log.e("LOGIN INFO", "Name: " + name );
+                            String url = "http://moxie.cs.oswego.edu:19991/whatzon/saveUser";
+                            final RequestQueue queue1 = Volley.newRequestQueue(context);
+                            StringRequest sr = new StringRequest(com.android.volley.Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+
+                                }
+                            }, new com.android.volley.Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+
+                                }
+                            }) {
+                                @Override
+                                protected Map<String, String> getParams() {
+                                    Map<String, String> params = new HashMap<String, String>();
+                                    Log.e("GEO","Answer"+ Geocoder.isPresent());
+                                    params.put("facebook", id);
+                                    params.put("picture", "NoTNeed");
+                                    params.put("tags", "Music,Food,Politics,Party,Education.");
+                                    params.put("min_distance", "0");
+                                    params.put("max_distance", "10");
+                                    params.put("time","4");
+                                    return params;
+                                }
+                            };
+                            queue1.add(sr);
+                            // Here we can catch some information from each user.
+                            setID(user.getId());
+                            Log.e("LOGIN INFO", "Name: " + id );
                         }
                         catch (Exception e){
                             e.printStackTrace();
@@ -164,31 +203,25 @@ public class Login extends FragmentActivity {
     private void updateUI() {
         Session session = Session.getActiveSession();
         getUserData(session, session.getState());
-        if (session.isOpened()) {
+       if (session.isOpened()) {
             final Context context = this;
             Intent intent = new Intent(context, Events.class);
-
             startActivity(intent);
         }
 
 
     }
-
+    public void setID(String id){
+        this.id=id;
+    }
+    public String getId(){
+        return this.id;
+    }
     @SuppressWarnings("incomplete-switch")
     private void handlePendingAction() {
-        PendingAction previouslyPendingAction = pendingAction;
+
         // These actions may re-set pendingAction if they are still pending, but we assume they
         // will succeed.
         pendingAction = PendingAction.NONE;
     }
-
-
-
-
-
-
-
-
-
-
 }

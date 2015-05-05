@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,13 +28,11 @@ public class Wait extends ActionBarActivity implements GoogleApiClient.Connectio
     private boolean allowNetwork;
     private TextView tvCoordinate;
     private GoogleApiClient mGoogleApiClient;
+    private Fmenu pmenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-        //Remove notification bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         super.onCreate(savedInstanceState);
 
@@ -49,33 +46,19 @@ public class Wait extends ActionBarActivity implements GoogleApiClient.Connectio
         tvCoordinate = (TextView) findViewById(R.id.tv_coordinate);
         callConnection();
         final Context context = this;
-        ImageButton menu = (ImageButton) findViewById(R.id.btnMenu);
+
+        ImageButton menu = (ImageButton) findViewById(R.id.menuBtn);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(context, MenuPage.class);
-
-
-                startActivity(intent);
+                pmenu = new Fmenu();
+                pmenu.initiatePopupWindow(Wait.this, v);
             }
         });
     }
 
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     private synchronized void callConnection(){
         mGoogleApiClient = new GoogleApiClient.Builder(this).addOnConnectionFailedListener(this).addConnectionCallbacks(this).addApi(LocationServices.API).build();
@@ -112,7 +95,7 @@ public class Wait extends ActionBarActivity implements GoogleApiClient.Connectio
         Log.i("LOG", "onConnectionSuspended(" + i + ")");
         final AlertDialog.Builder builder =
                 new AlertDialog.Builder(this);
-        builder.setMessage("Connection with location devices is suspended: onConnectionSuspended(" + i + ")");
+        builder.setMessage("No new events at this moment");
         builder.create().show();
 
     }
@@ -124,9 +107,40 @@ public class Wait extends ActionBarActivity implements GoogleApiClient.Connectio
         Log.i("LOG", "onConnectionFailed("+connectionResult+")");
         final AlertDialog.Builder builder =
                 new AlertDialog.Builder(this);
-        builder.setMessage("Connection with location devices is unable: onConnectionFailed("+connectionResult+")");
+        builder.setMessage("No new events at this moment");
         builder.create().show();
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+
+        switch (item.getItemId())
+        {
+            case R.id.settings:
+                startActivity(new Intent(this, Preferences.class));
+                return true;
+            case R.id.calendar:
+                startActivity(new Intent(this, Wait.class));
+                return true;
+            case R.id.profile:
+                startActivity(new Intent(this, Events.class));
+                return true;
+            case R.id.newevent:
+                startActivity(new Intent(this, AddEvent.class));
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

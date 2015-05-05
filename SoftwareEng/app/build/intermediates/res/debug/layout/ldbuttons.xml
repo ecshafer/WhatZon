@@ -6,8 +6,7 @@
     android:layout_marginBottom="20dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:weightSum="1"
-   >
+    android:weightSum="1">
 
 
     <ImageButton
@@ -74,4 +73,4 @@
     </RelativeLayout>
 
 </RelativeLayout>
-<!-- From: file:/C:/Users/Lucas/SoftwareEngineering/SoftwareEng/app/src/main/res/layout/ldbuttons.xml -->
+<!-- From: file:/C:/Users/Lucas/Desktop/WhatZon-MatthewBranch/SoftwareEng/app/src/main/res/layout/ldbuttons.xml -->

@@ -8,8 +8,8 @@ import butterknife.ButterKnife.Injector;
 public class Events$$ViewInjector<T extends suny.com.softwareeng.Events> implements Injector<T> {
   @Override public void inject(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427489, "field 'flingContainer'");
-    target.flingContainer = finder.castView(view, 2131427489, "field 'flingContainer'");
+    view = finder.findRequiredView(source, 2131427510, "field 'flingContainer'");
+    target.flingContainer = finder.castView(view, 2131427510, "field 'flingContainer'");
     view = finder.findRequiredView(source, 2131427386, "method 'right'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {

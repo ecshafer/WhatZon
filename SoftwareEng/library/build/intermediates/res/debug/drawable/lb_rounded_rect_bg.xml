@@ -19,4 +19,4 @@
     android:shape="rectangle">
     <corners android:radius="@dimen/lb_rounded_rect_corner_radius" />
 </shape>
-<!-- From: file:/C:/Users/Lucas/SoftwareEngineering/SoftwareEng/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/drawable/lb_rounded_rect_bg.xml -->
+<!-- From: file:/C:/Users/Lucas/Desktop/WhatZon-MatthewBranch/SoftwareEng/library/build/intermediates/exploded-aar/com.android.support/leanback-v17/21.0.3/res/drawable/lb_rounded_rect_bg.xml -->

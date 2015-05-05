@@ -14,7 +14,7 @@ public final class R {
 		public static final int rotation_degrees = 0x7f010058;
 	}
 	public static final class string {
-		public static final int app_name = 0x7f0d0013;
+		public static final int app_name = 0x7f0d0014;
 	}
 	public static final class style {
 		public static final int SwipeFling = 0x7f0e0072;
