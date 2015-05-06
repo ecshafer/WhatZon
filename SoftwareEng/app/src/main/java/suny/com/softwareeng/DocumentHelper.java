@@ -9,20 +9,10 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 
-/**
- * Created by AKiniyalocts on 2/23/15.
- */
+
 public class DocumentHelper {
 
-  /**
-   * Get a file path from a Uri. This will get the the path for Storage Access
-   * Framework Documents, as well as the _data field for the MediaStore and
-   * other file-based ContentProviders.
-   *
-   * @param context The context.
-   * @param uri The Uri to query.
-   * @author paulburke
-   */
+
   public static String getPath(final Context context, final Uri uri) {
 
     final boolean isKitKat = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
@@ -39,9 +29,9 @@ public class DocumentHelper {
           return Environment.getExternalStorageDirectory() + "/" + split[1];
         }
 
-        // TODO handle non-primary volumes
+
       }
-      // DownloadsProvider
+
       else if (isDownloadsDocument(uri)) {
 
         final String id = DocumentsContract.getDocumentId(uri);
@@ -50,7 +40,7 @@ public class DocumentHelper {
 
         return getDataColumn(context, contentUri, null, null);
       }
-      // MediaProvider
+
       else if (isMediaDocument(uri)) {
         final String docId = DocumentsContract.getDocumentId(uri);
         final String[] split = docId.split(":");

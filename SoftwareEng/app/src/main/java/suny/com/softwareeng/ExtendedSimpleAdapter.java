@@ -1,5 +1,5 @@
 package suny.com.softwareeng;
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
@@ -16,13 +16,13 @@ import android.widget.TextView;
 
 
 public class ExtendedSimpleAdapter extends SimpleAdapter{
-    List<? extends Map<String, ?>> map; // if fails to compile, replace with List<HashMap<String, Object>> map
+    List<? extends Map<String, ?>> map;
     String[] from;
     int layout;
     int[] to;
     Context context;
     LayoutInflater mInflater;
-    public ExtendedSimpleAdapter(Context context, List<? extends Map<String, ?>> data, // if fails to compile, do the same replacement as above on this line
+    public ExtendedSimpleAdapter(Context context, List<? extends Map<String, ?>> data,
                                  int resource, String[] from, int[] to) {
         super(context, data, resource, from, to);
         layout = resource;
@@ -82,8 +82,6 @@ public class ExtendedSimpleAdapter extends SimpleAdapter{
                         if (data instanceof Boolean) {
                             ((Checkable) v).setChecked((Boolean) data);
                         } else if (v instanceof TextView) {
-                            // Note: keep the instanceof TextView check at the bottom of these
-                            // ifs since a lot of views are TextViews (e.g. CheckBoxes).
                             setViewText((TextView) v, text);
                         } else {
                             throw new IllegalStateException(v.getClass().getName() +
@@ -91,8 +89,6 @@ public class ExtendedSimpleAdapter extends SimpleAdapter{
                                     (data == null ? "<unknown type>" : data.getClass()));
                         }
                     } else if (v instanceof TextView) {
-                        // Note: keep the instanceof TextView check at the bottom of these
-                        // ifs since a lot of views are TextViews (e.g. CheckBoxes).
                         setViewText((TextView) v, text);
                     } else if (v instanceof ImageView) {
                         if (data instanceof Integer) {
@@ -110,13 +106,7 @@ public class ExtendedSimpleAdapter extends SimpleAdapter{
             }
         }
     }
-
-
-
     private void setViewImage(ImageView v, Bitmap bmp){
         v.setImageBitmap(bmp);
     }
-
-
-
 }

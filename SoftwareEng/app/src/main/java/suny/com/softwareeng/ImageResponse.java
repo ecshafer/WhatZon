@@ -1,10 +1,6 @@
 package suny.com.softwareeng;
 
-/**
- * Created by AKiniyalocts on 1/14/15.
- *
- * Response from imgur when uploading to the server.
- */
+
 public class ImageResponse {
   public boolean success;
   public int status;

@@ -9,13 +9,7 @@ import java.io.File;
 import retrofit.RestAdapter;
 import retrofit.mime.TypedFile;
 
-/**
- * Created by AKiniyalocts on 1/12/15.
- *
- * Our upload service. This creates our restadapter, uploads our image, and notifies us of the response.
- *
- *
- */
+
 public class UploadService extends AsyncTask<Void, Void, Void> {
   public final static String TAG = UploadService.class.getSimpleName();
 

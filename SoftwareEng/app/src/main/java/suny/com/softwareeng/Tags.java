@@ -1,8 +1,6 @@
 package suny.com.softwareeng;
 
-/**
- * Created by Lucas on 4/6/2015.
- */
+
 public class Tags {
 
     private boolean musicTg;

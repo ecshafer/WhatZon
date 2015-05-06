@@ -64,10 +64,9 @@ public class Fmenu extends Activity {
             });
             ImageButton Calendar = (ImageButton) layout.findViewById(R.id.btnCalendar);
             Calendar.setOnClickListener(new View.OnClickListener() {
-
                 @Override
                 public void onClick(View v) {
-                    c.startActivity(new Intent(c, AddEvent.class));
+                    c.startActivity(new Intent(c, Calendar.class));
                 }
             });
 

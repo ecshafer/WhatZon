@@ -37,6 +37,7 @@ public class GeocodingLocation {
                         result = sb.toString();
                     }
                 } catch (IOException e) {
+                    e.printStackTrace();
                     Log.e(TAG, "Unable to connect to Geocoder", e);
                 } finally {
                     Message message = Message.obtain();
@@ -44,8 +45,6 @@ public class GeocodingLocation {
                     if (result != null) {
                         message.what = 1;
                         Bundle bundle = new Bundle();
-                        result = "Address: " + locationAddress +
-                                "\n\nLatitude and Longitude :\n" + result;
                         bundle.putString("address", result);
                         message.setData(bundle);
                     } else {
@@ -61,5 +60,6 @@ public class GeocodingLocation {
             }
         };
         thread.start();
+
     }
 }

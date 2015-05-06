@@ -1,5 +1,6 @@
 package suny.com.softwareeng;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -38,6 +39,10 @@ public class MapsActivity extends FragmentActivity {
     private Marker marker;
     private Polyline polyline;
     private List<LatLng> list;
+    private String name;
+    private String add;
+    private String lat;
+    private String lon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +53,19 @@ public class MapsActivity extends FragmentActivity {
         options.zOrderOnTop(true);
         SupportMapFragment mapFrag = SupportMapFragment.newInstance(options);
 
+        Intent intent = getIntent();
+
+        if(intent != null){
+            Bundle params = intent.getExtras();
+
+            if(params != null){
+                name = params.getString("name");
+                add = params.getString("add");
+                lat = params.getString("lat");
+                lon = params.getString("lon");
+            }
+        }
+
         configMap();
     }
 
@@ -56,9 +74,9 @@ public class MapsActivity extends FragmentActivity {
                 R.id.mapView)).getMap();
 
 
-        LatLng latLng = new LatLng(43.4542984,-76.5411241);
+        LatLng latLng = new LatLng(Double.parseDouble(lat),Double.parseDouble(lon));
 
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(latLng).zoom(16).bearing(0).tilt(0).build();
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(latLng).zoom(10).bearing(0).tilt(0).build();
         CameraUpdate update = CameraUpdateFactory.newCameraPosition(cameraPosition);
 
         map.moveCamera(update);
@@ -75,7 +93,7 @@ public class MapsActivity extends FragmentActivity {
             }
         });
         //Markers
-        addMarker(new LatLng(43.4542984,-76.5411241), "Test Place", "Event: Description blablabla ");
+        addMarker(new LatLng(Double.parseDouble(lat),Double.parseDouble(lon)), name, "Address: " + add);
 
     }
 
@@ -134,7 +152,7 @@ public class MapsActivity extends FragmentActivity {
 
                 TextView tv = new TextView(MapsActivity.this);
                 tv.setText(Html.fromHtml("<b><font color=\"#ffffff\" size=24px>" + marker.getTitle() +
-                                        ":</font></b><br>" + marker.getSnippet()));
+                        "</font></b><br>" + marker.getSnippet()));
 
                 ll.addView(tv);
 

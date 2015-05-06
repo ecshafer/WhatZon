@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
+
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
@@ -16,13 +16,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.volley.Request;
+
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.JsonRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -32,8 +30,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 
 public class EventDetail extends ActionBarActivity {
@@ -101,20 +97,17 @@ public class EventDetail extends ActionBarActivity {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
-                                Log.d("value1:" , " "+ value);
-                                value = (int) extras.getSerializable("id");
-                                TextView name = (TextView) findViewById(R.id.txtName);
-                                int size = response.getJSONArray("Names:").length();
-                                Log.d("value2:" , " "+ value);
-                            for(int i=0;i<size;i++) {
-                                Log.d("value3:" , " "+ response.getJSONArray("Ids:").getInt(i));
-                                Log.d("value3:" , " "+ value);
-                                if (response.getJSONArray("Ids:").getInt(i) == (value)) {
 
+                                value = (int) extras.getSerializable("id");
+                                int size = response.getJSONArray("Names:").length();
+                            for(int i=0;i<size;i++) {
+                                if (response.getJSONArray("Ids:").getInt(i) == (value)) {
                                     Log.d("value4444:" , " "+ value);
-                                    TextView descript = (TextView) findViewById(R.id.txtDescription);
-                                    TextView names = (TextView) findViewById(R.id.txtName);
-                                    TextView address = (TextView) findViewById(R.id.txtAdress);
+                                     TextView descript = (TextView) findViewById(R.id.txtDescription);
+                                    //TextView descript = (TextView) findViewById(R.id.txtDescription);
+                                    final TextView names = (TextView) findViewById(R.id.txtName);
+                                   // TextView names = (TextView) findViewById(R.id.txtName);
+                                    final TextView address = (TextView) findViewById(R.id.txtAdress);
                                     TextView date = (TextView) findViewById(R.id.txtDate);
                                     ImageView picture = (ImageView) findViewById(R.id.imageView2);
                                     descript.setText(response.getJSONArray("Description:").get(i).toString());
@@ -122,44 +115,46 @@ public class EventDetail extends ActionBarActivity {
                                     address.setText(response.getJSONArray("Address:").get(i).toString());
                                     date.setText(response.getJSONArray("Dates:").get(i).toString());
                                     picture.setImageBitmap(getBitmapFromURL(response.getJSONArray("Pictures:").get(i).toString()));
-                                    Log.d("TEste", response.getJSONArray("latitude").get(i).toString());
-                                    Log.d("TEste",response.getJSONArray("longitude").get(i).toString());
-
-
+                                    final String lat = response.getJSONArray("latitude").get(i).toString();
+                                    final String lon = response.getJSONArray("longitude").get(i).toString();
+                                    ImageButton map = (ImageButton) findViewById(R.id.btnMaps);
+                                    map.setOnClickListener(new View.OnClickListener() {
+                                        public void onClick(View v) {
+                                            Intent intent = new Intent(context, MapsActivity.class);
+                                            final Bundle params = new Bundle();
+                                            params.putString("name",names.getText().toString());
+                                            params.putString("desc", address.getText().toString());
+                                            params.putString("lat", lat);
+                                            params.putString("lon",lon);
+                                            intent.putExtras(params);
+                                            startActivity(intent, params);
+                                            startActivity(intent);
+                                        }
+                                    });
                                 }
-                            }
 
-                    Log.d("value:" , " "+ value);
+                            }
                             } catch (JSONException e) {
-                                Log.d("Failed", "to upload from moxie"); }
+                                e.printStackTrace();
+                                Log.d("FailedEventDetail", "Moxie connection Failed"); }
                             }
                         },
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError volleyError) {
-                            Log.d("volley error", "errror");
+                            Log.d("FailedEventDetail", volleyError.toString());
                         }
                     });
-            Log.d("queue", "has Stopped");
+            Log.d("EventDetail", "Finished");
             queue.add(request);
 
         }
 
-        ImageView picture = (ImageView) findViewById(R.id.imageView2);
-        //picture.setBackground((Integer) value.get("picture"));
+
+
         right.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Save in the calendar
                 Log.d("Details", "Right");
-              /*  Calendar cal = Calendar.getInstance();
-                Intent intent = new Intent(Intent.ACTION_EDIT);
-                intent.setType("vnd.android.cursor.item/event");
-                intent.putExtra("beginTime", cal.getTimeInMillis());
-                intent.putExtra("allDay", true);
-                intent.putExtra("rrule", "FREQ=YEARLY");
-                intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
-                intent.putExtra("title", "A Test Event from android app");
-                startActivity(intent);*/
                 Intent intent = new Intent(context, Events.class);
                 intent.putExtra("answer","right");
                 setResult(RESULT_OK, intent);
@@ -179,17 +174,14 @@ public class EventDetail extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.d("TEste", "JJJ");
         if(data != null){
-            Bundle extras = getIntent().getExtras();
             String name = data.getStringExtra("answer");
-            Log.d("TEste", name);
             if (name != null) {
                 if(name.equals("right")){
              //       flingContainer.getTopCardListener().selectRight();

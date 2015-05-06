@@ -69,10 +69,6 @@
             android:label="WhatZon" >
         </activity>
         <activity
-            android:name="suny.com.softwareeng.MenuPage"
-            android:label="WhatZon" >
-        </activity>
-        <activity
             android:name="suny.com.softwareeng.Preferences"
             android:label="WhatZon"
             android:launchMode="singleInstance" >
@@ -87,6 +83,10 @@
         </activity>
         <activity
             android:name="suny.com.softwareeng.UserProfile"
+            android:label="WhatZon" >
+        </activity>
+        <activity
+            android:name="suny.com.softwareeng.Calendar"
             android:label="WhatZon" >
         </activity>
     </application>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/fundo">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Date - Time"
+            android:id="@+id/txtData"
+            android:textColor="#ff730a8f"
+            android:textIsSelectable="false"
+            android:textStyle="bold"
+            android:layout_below="@+id/menuBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Title"
+            android:id="@+id/txtTitle"
+            android:textColor="#ff730a8f"
+            android:textIsSelectable="false"
+            android:textStyle="bold"
+            android:layout_below="@+id/menuBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="left|center_vertical" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInfo"
+            android:background="@drawable/info"
+            android:layout_gravity="right|center_vertical" />
+    </FrameLayout>
+
+</LinearLayout>

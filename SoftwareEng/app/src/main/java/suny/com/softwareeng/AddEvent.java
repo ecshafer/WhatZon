@@ -1,8 +1,10 @@
 package suny.com.softwareeng;
 
 import android.app.Activity;
-import android.content.Context;
+
 import android.content.Intent;
+import android.graphics.Color;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,7 +30,10 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,27 +41,28 @@ import java.util.Map;
 
 public class AddEvent extends Activity implements OnImageUploadedListener{
 
-    ArrayList<Event> event = new ArrayList<>();
-    EditText title;
-    EditText location;
-    EditText time;
-    EditText date;
+
+    EditText title,location,time,date,moreInfo;
     private Upload upload;
     ImageButton ok,no;
     private File chosenFile;
     Tags tags;
-    EditText moreInfo;
-    int flag;
-    Event ev;
-    String t;
+    int flag,f;
+    String latitude,longitude,linkPicture;
     Button browser;
     private Fmenu pmenu;
-    public View view2;
     CheckBox musCheck,partCheck,movCheck,eduCheck,politCheck,foodCheck;
-    String linkPicture;
+
     @Override
     public void onImageUploaded(ImageResponse response) {
-        Log.d("TESTE", response.toString());
+        browser = (Button) findViewById(R.id.browseBtn);
+            if(response.success) {
+                browser.setBackgroundColor((Color.parseColor("#00FF00")));
+                browser.setText("Uploaded");
+            }else{
+                browser.setBackgroundColor((Color.parseColor("#fff00000")));
+                browser.setText("Failed");
+        }
         linkPicture = response.getLink();
     }
 
@@ -66,18 +72,19 @@ public class AddEvent extends Activity implements OnImageUploadedListener{
             String locationAddress;
             switch (message.what) {
                 case 1:
-                    Bundle bundle = message.getData();
-                    locationAddress = bundle.getString("address");
+                    //Bundle bundle = message.getData();
+                    latitude = Double.toString(GeocodingLocation.lat);
+                    longitude = Double.toString(GeocodingLocation.longt);
                     break;
                 default:
-                    locationAddress = null;
+                    f=0;
             }
-            Log.d("Long", locationAddress);
+            f=1;
         }
     }
 
 
-    public void callPopUp(View view,String message){
+    public void callPopUp(View view, final String message){
         LayoutInflater layoutInflater
                 = (LayoutInflater) getBaseContext()
                 .getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -94,8 +101,13 @@ public class AddEvent extends Activity implements OnImageUploadedListener{
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                popupWindow.dismiss();
+
+                if(message.equals("Event added")){
+                    finish();
+                }else{
+                    popupWindow.dismiss();
+                }
+
             }
         });
 
@@ -112,7 +124,7 @@ public class AddEvent extends Activity implements OnImageUploadedListener{
         EditText time = (EditText) findViewById(R.id.Time);
         String ti = time.getText().toString();
 
-        browser = (Button) findViewById(R.id.browseBtn);
+
         musCheck =(CheckBox) findViewById(R.id.musicBox);
         partCheck =(CheckBox) findViewById(R.id.partyBox);
         movCheck= (CheckBox) findViewById(R.id.moviesBox);
@@ -126,54 +138,54 @@ public class AddEvent extends Activity implements OnImageUploadedListener{
         tags.setEducationTg(eduCheck.isChecked());
         tags.setPolitcsTg(politCheck.isChecked());
         tags.setFoodTg(foodCheck.isChecked());
-        if (t.trim().length() != 0 && l.trim().length() !=0 && d.trim().length() !=0 && ti.trim().length() != 0) {
-            flag=0;
-        }else
-        {
+        //
+        if (t.trim().length() != 0 && l.trim().length() !=0 && d.trim().length() !=0 && ti.trim().length() != 0 && browser.getText().equals("Uploaded") ) {
+
+            try {
+                DateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+                df.setLenient(false);
+                df.parse(d);
+                flag=0;
+            } catch (ParseException e) {
+                e.printStackTrace();
+                flag=1;
+                callPopUp(view,"Date wrong, use MM-dd-yyy");
+            }
+        }else{
             flag = 1;
-            Log.d("ELSE", "ELSE");
             callPopUp(view,"* Means required");
         }
 
         EditText description = (EditText) findViewById(R.id.MoreInfo);
         String des = description.getText().toString();
-
-
         final String nameM = t;
         final String timeM = ti;
         final String dateM = d;
         final String whereM = l;
         final String descriptionM = des;
-        final String authorM = Login.name;
-
         final String tagsM = tags.toString();
 
+        if(flag==0) {
+            GeocodingLocation locationAddress = new GeocodingLocation();
+            locationAddress.getAddressFromLocation(whereM,
+                    getApplicationContext(), new GeocoderHandler());
 
-        GeocodingLocation locationAddress = new GeocodingLocation();
-        locationAddress.getAddressFromLocation(whereM,
-                getApplicationContext(), new GeocoderHandler());
-       // Log.d("Name",authorM);
-        final String pictureM = "@getPicture";
-
-        final String latitude = Double.toString(locationAddress.lat);
-        final String longitude = Double.toString(locationAddress.longt);
-
-        Log.d(" Lat e Log"," lat + log  "+latitude);
-        Log.d(" Lat e Log"," lat + log  "+longitude);
-
-        if(flag ==0) {
-
+            if (f == 0) {
+                callPopUp(view, "Loading or Wrong Address. Please Try Again!!");
+            } else {
+                f = 1;
+            }
+        }
+       if(flag ==0 && f == 1) {
             String url = "http://moxie.cs.oswego.edu:19991/whatzon/addEvent";
             final RequestQueue queue1 = Volley.newRequestQueue(this);
             StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-
                 }
             }) {
                 @Override
@@ -185,7 +197,6 @@ public class AddEvent extends Activity implements OnImageUploadedListener{
                     params.put("latitude", latitude);
                     params.put("description", descriptionM);
                     params.put("longitude", longitude);
-                    params.put("picture", pictureM);
                     params.put("tags", tagsM);
                     params.put("picture",linkPicture);
                     params.put("responsible", Login.id);
@@ -193,20 +204,18 @@ public class AddEvent extends Activity implements OnImageUploadedListener{
                     int day = c.get(Calendar.DAY_OF_MONTH);
                     int month = c.get(Calendar.MONTH);
                     int year = c.get(Calendar.YEAR);
-                    params.put("last_update", month+"/"+day+"/"+year);
-
-                    Log.d("End","End");
+                    params.put("last_update", month + "/" + day + "/" + year);
                     return params;
-
                 }
             };
+           queue1.add(sr);
 
-
-            queue1.add(sr);
             callPopUp(view,"Event Added");
-
         }
+        f=0;
+
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -216,45 +225,40 @@ public class AddEvent extends Activity implements OnImageUploadedListener{
         setContentView(R.layout.addevent);
         ok = (ImageButton) findViewById(R.id.btnYes);
         no = (ImageButton) findViewById(R.id.btnNo);
-        final Context context = this;
         browser = (Button) findViewById(R.id.browseBtn);
-        musCheck =(CheckBox) findViewById(R.id.musicBox);
-        partCheck =(CheckBox) findViewById(R.id.partyBox);
-        movCheck= (CheckBox) findViewById(R.id.moviesBox);
-        eduCheck =(CheckBox) findViewById(R.id.educationBox);
-        politCheck =(CheckBox) findViewById(R.id.politcsBox);
         title = (EditText) findViewById(R.id.Title);
         date = (EditText) findViewById(R.id.Date);
         time = (EditText) findViewById(R.id.Time);
         moreInfo = (EditText) findViewById(R.id.MoreInfo);
         location = (EditText) findViewById(R.id.Location);
+        f=0;
 
-        String test = Login.name;
 
         browser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                browser.setText("Browse");
+                browser.setBackgroundColor((Color.parseColor("#ff6e058f")));
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent,"Select Picture"), 1);
-
-
             }
         });
         no.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(title.getText().toString().trim().length() != 0)
+                if (title.getText().toString().trim().length() != 0)
                     title.setText("");
-                if(location.getText().toString().trim().length() != 0)
+                if (location.getText().toString().trim().length() != 0)
                     location.setText("");
-                if(moreInfo.getText().toString().trim().length() != 0)
+                if (moreInfo.getText().toString().trim().length() != 0)
                     moreInfo.setText("");
-                if(date.getText().toString().trim().length() != 0){
+                if (date.getText().toString().trim().length() != 0)
                     date.setText("");
-                    if(time.getText().toString().trim().length() != 0)
-                        time.setText("");
-                }
+                if (time.getText().toString().trim().length() != 0)
+                    time.setText("");
+                if (moreInfo.getText().toString().trim().length() != 0)
+                    moreInfo.setText("");
+
             }
         });
 
@@ -267,33 +271,29 @@ public class AddEvent extends Activity implements OnImageUploadedListener{
         });
 
     }
+
     @Override
     public void onActivityResult(int requestCode,int resultCode,Intent data){
         Uri returnUri;
         if(resultCode == RESULT_OK) {
             if (requestCode == 1){
                 Log.d("Image",data.getData().toString());
-
-
                     returnUri = data.getData();
+                browser.setText("Uploading");
+                browser.setBackgroundColor((Color.parseColor("#FFFF00")));
                     chosenFile = new File(DocumentHelper.getPath(this, returnUri));
                 createUpload(chosenFile);
                 new UploadService(upload, this).execute();
-
                 }
             }
-
         }
+
     private void createUpload(File image){
         upload = new Upload();
         EditText title = (EditText) findViewById(R.id.Title);
         upload.image = image;
         upload.title = title.getText().toString();
         upload.description =" Image for event";
-
     }
-
-
-
-    }
+}
 

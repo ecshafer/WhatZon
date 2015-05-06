@@ -69,10 +69,7 @@
             android:name=".AddEvent"
             android:label="WhatZon" >
         </activity>
-        <activity
-            android:name=".MenuPage"
-            android:label="WhatZon" >
-        </activity>
+
         <activity
             android:name=".Preferences"
             android:launchMode= "singleInstance"
@@ -90,6 +87,10 @@
         </activity>
         <activity
             android:name=".UserProfile"
+            android:label="WhatZon" >
+        </activity>
+        <activity
+            android:name=".Calendar"
             android:label="WhatZon" >
         </activity>
     </application>

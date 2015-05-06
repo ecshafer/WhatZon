@@ -7,11 +7,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,16 +29,11 @@ public class UserProfile extends ActionBarActivity {
         ProfilePictureView userPicture =(ProfilePictureView) findViewById(R.id.picture);
         userPicture.setProfileId(Login.id);
         id = Login.id;
-        Log.d("tes",""+id);
         TextView nameUser = (TextView) findViewById(R.id.name);
         nameUser.setText(Login.name);
-        Button edit = (Button) findViewById(R.id.button);
-
-        //Just a example
         String tags= "Music, Party, Education";
         TextView favTag = (TextView) findViewById(R.id.tags);
         favTag.setText(tags);
-
         ImageButton menu = (ImageButton) findViewById(R.id.menuBtn);
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -46,7 +41,6 @@ public class UserProfile extends ActionBarActivity {
                 pmenu.initiatePopupWindow(UserProfile.this, v);
             }
         });
-
     }
 
     @Override
@@ -67,7 +61,6 @@ public class UserProfile extends ActionBarActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
@@ -78,7 +71,6 @@ public class UserProfile extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;

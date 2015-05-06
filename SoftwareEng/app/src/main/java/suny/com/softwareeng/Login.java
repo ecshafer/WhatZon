@@ -12,7 +12,7 @@ import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+
 
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
@@ -143,12 +143,14 @@ public class Login extends FragmentActivity {
         } else if (state == SessionState.OPENED_TOKEN_UPDATED){
             handlePendingAction();
         }
-       /* if(state.isOpened()){
+        if (session.isOpened()) {
+
+            getUserData(session, session.getState());
             final Context context = this;
             Intent intent = new Intent(context, Events.class);
             startActivity(intent);
         }
-        updateUI();*/
+
     }
     private void getUserData(Session session, SessionState state){
         if (state.isOpened()){
@@ -176,7 +178,7 @@ public class Login extends FragmentActivity {
                                 @Override
                                 protected Map<String, String> getParams() {
                                     Map<String, String> params = new HashMap<String, String>();
-                                    Log.e("GEO","Answer"+ Geocoder.isPresent());
+
                                     params.put("facebook", id);
                                     params.put("picture", "NoTNeed");
                                     params.put("tags", "Music,Food,Politics,Party,Education.");
@@ -187,13 +189,13 @@ public class Login extends FragmentActivity {
                                 }
                             };
                             queue1.add(sr);
-                            // Here we can catch some information from each user.
+
                             setID(user.getId());
-                            Log.e("LOGIN INFO", "Name: " + id );
+
                         }
                         catch (Exception e){
                             e.printStackTrace();
-                            Log.d("LOGIN INFO", "Exception e");
+                            Log.d("LOGIN INFO", e.toString());
                         }
                     }
                 }
